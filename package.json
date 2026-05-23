@@ -1,0 +1,8 @@
+{
+  "name": "github-trending-cli",
+  "version": "1.0.0",
+  "description": "A CLI tool to search trending GitHub repos by keyword and time range",
+  "type": "module",
+  "main": "main.js",
+  "license": "MIT"
+}

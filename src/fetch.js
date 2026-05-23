@@ -1,15 +1,15 @@
-export async function fetchToGithub(URL) {
-  try {
-    const response = await fetch(URL, {
-      headers: { "User-Agent": "Project" },
-    });
+export async function fetchToGithub(url) {
+  const response = await fetch(url, {
+    headers: { "User-Agent": "github-trending-cli" },
+  });
 
-    if (!response.ok) {
-      ("error with getting response");
+  if (!response.ok) {
+    console.error(`GitHub API error: ${response.status} ${response.statusText}`);
+    if (response.status === 403) {
+      console.error("Rate limit exceeded. Try again later.");
     }
-
-    return response;
-  } catch (error) {
-    console.log("Error" + error.message);
+    return null;
   }
+
+  return response;
 }
