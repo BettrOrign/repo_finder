@@ -61,6 +61,4 @@ Date defaults are stored in `config.json` and auto-loaded on startup:
 
 Uses the [GitHub Search Repositories API](https://docs.github.com/en/rest/search/search#search-repositories) with query format:
 
-```
-q=<keyword>+created:>YYYY-MM-DD&sort=stars&order=desc
-```
+https://roadmap.sh/projects/github-trending-cli
